@@ -26,10 +26,10 @@ jobs:
         python -m pip install -e ".[dev]"
 
     - name: Run tests
-      run: pytest
+      run: pytest -v
 
   test_py36:
-    name: Unit Tests (Python 3.6)
+    name: Unit Tests (3.6)
     runs-on: ubuntu-20.04
 
     steps:
@@ -47,7 +47,7 @@ jobs:
         python -m pip install -e ".[dev]"
 
     - name: Run tests
-      run: pytest
+      run: pytest -v
 
   coverage:
     name: Coverage
