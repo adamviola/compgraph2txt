@@ -138,7 +138,7 @@ def test_two_sources():
     graph.add_edge("A", "B", output="b", input="c")
     graph.add_edge("ext", "B", input="c")
 
-    with pytest.raises(ValueError, match="Two \(or more\) sources exist"):
+    with pytest.raises(ValueError, match="Two \\(or more\\) sources exist"):
         compgraph2txt(graph)
 
 
