@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "compgraph2txt"
+version = "1.0.0"
+description = "Visualize computational graphs in the terminal."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.6"
+keywords = ["graph", "computational graph", "visualization"]
+authors = [{ name = "Adam Viola", email = "adam@viola.dev" }]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = ["networkx>=2.5.1"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["compgraph2txt"]
